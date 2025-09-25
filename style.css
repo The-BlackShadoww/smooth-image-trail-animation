@@ -1,0 +1,123 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-text: #fff;
+  --color-bg: #000;
+  --img-width: 100px;
+  --img-ratio: 1.1;
+  --img-offset-x: 20px;
+  --img-offset-y: 20px;
+  --img-border-radius: 7px;
+}
+
+body {
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  font-family: "Neue Montreal";
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  position: relative;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+  outline: none;
+}
+
+.studio-header {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.studio-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.studio-logo {
+  font-size: 70px;
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  margin-bottom: 60px;
+}
+
+.studio-tagline {
+  max-width: 400px;
+  font-size: 12px;
+  text-align: left;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+
+.studio-footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.content_img {
+  width: var(--img-width);
+  aspect-ratio: var(--img-ratio);
+  border-radius: var(--img-border-radius);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  will-change: transform, filter;
+}
+
+.content_img-inner {
+  background-position: 50% 50%;
+  width: calc(100% + var(--img-offset-x));
+  height: calc(100% + var(--img-offset-y));
+  background-size: cover;
+  position: absolute;
+  top: calc(-1 * var(--img-offset-y) / 2);
+  left: calc(-1 * var(--img-offset-x) / 2);
+}
