@@ -7,8 +7,8 @@
 }
 
 :root {
-  --color-text: #fff;
-  --color-bg: #000;
+  --color-text: #000;
+  --color-bg: #fff;
   --img-width: 100px;
   --img-ratio: 1.1;
   --img-offset-x: 20px;
